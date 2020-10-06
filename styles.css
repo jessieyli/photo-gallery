@@ -1,0 +1,65 @@
+h1 {
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  text-align: center;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+
+.gallery-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex: 25%;
+  max-width: 25%;
+}
+
+.img-container {
+  position: relative;
+  max-width: 100%;
+}
+.img-container:hover .overlay {
+  opacity: 1;
+}
+img {
+  width: 100%;
+  display: block;
+}
+.overlay {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.overlay p {
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  color: white;
+  text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
